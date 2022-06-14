@@ -1,0 +1,221 @@
+body {
+    background-color: #c3cfe2;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: small;
+    text-align: center;
+}
+
+$standard-padding: 10px;
+$Wth-color: white;
+
+/* Gehele box */
+.container {
+    height: 300px;
+    width: 200px;
+    display: grid;
+    grid-template-columns: 1;
+    grid-template-rows: 75% 25%;
+    grid-template-areas: "b"
+        "f";
+    background-color: $Wth-color;
+    border-radius: 10px;
+    box-shadow: 0px 0px 5px 0px black;
+    transform: translateX(115px);
+}
+
+/* Bovenkant box */
+.box {
+    grid-area: b;
+    padding: $standard-padding;
+    border-radius: 10px;
+
+}
+
+/* Onderkant box */
+.footer {
+    grid-area: f;
+    padding: $standard-padding;
+    background-color: #686de0;
+    border-bottom-right-radius: 9px;
+    border-bottom-left-radius: 9px;
+    color: $Wth-color;
+}
+
+.website {
+    color: $Wth-color;
+}
+
+/* Testimonial foto */
+.nick-testimonial {
+    height: 43px;
+    width: 50px;
+    border-radius: 100px;
+    border: solid $Wth-color 2px;
+    transform: translateX(-35px) translateY(10px);
+}
+
+/*Portfolio Grid*/
+.alles {
+    display: grid;
+    padding: $standard-padding;
+    grid-template-columns: 7;
+    grid-template-rows: 7;
+    grid-template-areas: "N1 N2 N3""N4 N5 N6""N7"
+}
+
+/* Variables */
+$foto-height: 300px;
+$foto-width: 350px;
+
+/* Portfolio Tekst */
+
+
+/* Portfolio foto's */
+.portfolio1 {
+    grid-area: N1;
+}
+
+.portfolio2 {
+    grid-area: N2;
+}
+
+.portfolio3 {
+    grid-area: N3;
+}
+
+.portfolio4 {
+    grid-area: N4;
+}
+
+.portfolio5 {
+    grid-area: N5;
+}
+
+.portfolio6 {
+    grid-area: N6;
+}
+
+.portfolio7 {
+    grid-area: N7;
+}
+
+.portfolio-grid {
+    position: relative;
+    width: 80%;
+}
+
+.Nick1 {
+    opacity: 1;
+    display: relative;
+    width: 100%;
+    height: auto;
+    transition: .5s ease;
+    backface-visibility: hidden;
+}
+
+.overlay {
+    transition: .5s ease;
+    opacity: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+.portfolio-grid:hover .Nick1 {
+    opacity: 0.3;
+}
+
+.portfolio-grid:hover .overlay {
+    opacity: 1;
+}
+
+.text {
+    color: $Wth-color;
+    font-size: 16px;
+    padding: 16px 32px;
+}
+
+/* Social Media Transitions */
+
+.icon-bar {
+    position: fixed;
+    top: 30%;
+    left: 98%;
+    width: 200px;
+    display: flex;
+    flex-direction: column;
+}
+
+.icon-bar a {
+    text-decoration: none;
+    text-transform: none;
+    font-size: 26px;
+    padding: $standard-padding;
+    margin: 0px;
+    text-align: left;
+    transform: translate(0px, 0px, );
+    transition: all 0.5s
+}
+
+.icon-bar a:hover {
+    transform: translate(-140px, 0px)
+}
+
+.icon-bar i {
+    margin-left: 0px;
+}
+
+.icon-bar span {
+    margin-left: 25px;
+}
+
+/* Icon Bar kleuren */
+
+
+.laptop {
+    background: #e17b77;
+    color: $Wth-color;
+}
+
+.twitter {
+    background: #00aced;
+    color: $Wth-color;
+}
+
+.linkedin {
+    background: #007bb6;
+    color: $Wth-color;
+}
+
+.facebook {
+    background: #3b5998;
+    color: $Wth-color;
+}
+
+.github {
+    background: #333;
+    color: $Wth-color;
+}
+
+/* Media Queries */
+@media (min-width: 320px) {
+    .alles {
+        grid-template-areas: "N1""N2""N3""N4""N5""N6";
+    }
+}
+
+@media (min-width: 768px) {
+    .alles {
+        grid-template-areas: "N1 N2""N3 N4""N5 N6"
+        ;
+    }
+}
+
+@media (min-width: 1024px) {
+    .alles {
+        grid-template-areas: "N1 N2 N3""N4 N5 N6"
+    }
+}

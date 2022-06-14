@@ -1,0 +1,247 @@
+body {
+  background-color: #c3cfe2;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  font-size: small;
+  text-align: center;
+}
+
+/* Gehele box */
+.container {
+  height: 300px;
+  width: 200px;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1;
+      grid-template-columns: 1;
+  -ms-grid-rows: 75% 25%;
+      grid-template-rows: 75% 25%;
+      grid-template-areas: "b" "f";
+  background-color: white;
+  border-radius: 10px;
+  -webkit-box-shadow: 0px 0px 5px 0px black;
+          box-shadow: 0px 0px 5px 0px black;
+  -webkit-transform: translateX(115px);
+          transform: translateX(115px);
+}
+
+/* Bovenkant box */
+.box {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  grid-area: b;
+  padding: 10px;
+  border-radius: 10px;
+}
+
+/* Onderkant box */
+.footer {
+  -ms-grid-row: 2;
+  -ms-grid-column: 1;
+  grid-area: f;
+  padding: 10px;
+  background-color: #686de0;
+  border-bottom-right-radius: 9px;
+  border-bottom-left-radius: 9px;
+  color: white;
+}
+
+.website {
+  color: white;
+}
+
+/* Testimonial foto */
+.nick-testimonial {
+  height: 43px;
+  width: 50px;
+  border-radius: 100px;
+  border: solid white 2px;
+  -webkit-transform: translateX(-35px) translateY(10px);
+          transform: translateX(-35px) translateY(10px);
+}
+
+/*Portfolio Grid*/
+.alles {
+  display: -ms-grid;
+  display: grid;
+  padding: 10px;
+  -ms-grid-columns: 7;
+      grid-template-columns: 7;
+  -ms-grid-rows: 7;
+      grid-template-rows: 7;
+      grid-template-areas: "N1 N2 N3" "N4 N5 N6" "N7";
+}
+
+/* Variables */
+/* Portfolio Tekst */
+/* Portfolio foto's */
+.portfolio1 {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  grid-area: N1;
+}
+
+.portfolio2 {
+  -ms-grid-row: 1;
+  -ms-grid-column: 2;
+  grid-area: N2;
+}
+
+.portfolio3 {
+  -ms-grid-row: 1;
+  -ms-grid-column: 3;
+  grid-area: N3;
+}
+
+.portfolio4 {
+  -ms-grid-row: 2;
+  -ms-grid-column: 1;
+  grid-area: N4;
+}
+
+.portfolio5 {
+  -ms-grid-row: 2;
+  -ms-grid-column: 2;
+  grid-area: N5;
+}
+
+.portfolio6 {
+  -ms-grid-row: 2;
+  -ms-grid-column: 3;
+  grid-area: N6;
+}
+
+.portfolio7 {
+  -ms-grid-row: 3;
+  -ms-grid-column: 1;
+  grid-area: N7;
+}
+
+.portfolio-grid {
+  position: relative;
+  width: 80%;
+}
+
+.Nick1 {
+  opacity: 1;
+  display: relative;
+  width: 100%;
+  height: auto;
+  -webkit-transition: .5s ease;
+  transition: .5s ease;
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
+}
+
+.overlay {
+  -webkit-transition: .5s ease;
+  transition: .5s ease;
+  opacity: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.portfolio-grid:hover .Nick1 {
+  opacity: 0.3;
+}
+
+.portfolio-grid:hover .overlay {
+  opacity: 1;
+}
+
+.text {
+  color: white;
+  font-size: 16px;
+  padding: 16px 32px;
+}
+
+/* Social Media Transitions */
+.icon-bar {
+  position: fixed;
+  top: 30%;
+  left: 98%;
+  width: 200px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.icon-bar a {
+  text-decoration: none;
+  text-transform: none;
+  font-size: 26px;
+  padding: 10px;
+  margin: 0px;
+  text-align: left;
+  -webkit-transform: translate(0px, 0px);
+          transform: translate(0px, 0px);
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+}
+
+.icon-bar a:hover {
+  -webkit-transform: translate(-140px, 0px);
+          transform: translate(-140px, 0px);
+}
+
+.icon-bar i {
+  margin-left: 0px;
+}
+
+.icon-bar span {
+  margin-left: 25px;
+}
+
+/* Icon Bar kleuren */
+.laptop {
+  background: #e17b77;
+  color: white;
+}
+
+.twitter {
+  background: #00aced;
+  color: white;
+}
+
+.linkedin {
+  background: #007bb6;
+  color: white;
+}
+
+.facebook {
+  background: #3b5998;
+  color: white;
+}
+
+.github {
+  background: #333;
+  color: white;
+}
+
+/* Media Queries */
+@media (min-width: 320px) {
+  .alles {
+        grid-template-areas: "N1" "N2" "N3" "N4" "N5" "N6";
+  }
+}
+
+@media (min-width: 768px) {
+  .alles {
+        grid-template-areas: "N1 N2" "N3 N4" "N5 N6";
+  }
+}
+
+@media (min-width: 1024px) {
+  .alles {
+        grid-template-areas: "N1 N2 N3" "N4 N5 N6";
+  }
+}
+/*# sourceMappingURL=styles.css.map */
